@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #ebf0ec;
+        }
+    
+        p {
+            color: brown;
+            font-size: 200px;
+            text-align: center;
+    
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">JavaScript Functions</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Buttons with Functions</h2>
+        <button onclick="myFunction()" type="button" class="btn">Function</button>
+        <button onclick="myanonymousfun()" type="button" class="btn btn-default">Anonymous Function</button>
+        <button onclick="myArrowFunction()" type="button" class="btn btn-primary">Arrow Function</button>
+        <button onclick="multipleArguments()" type="button" class="btn btn-success">Multiple Arguments</button>
+        
+    </div>
+
+    <p id="myfun"></p>
+    <script>
+        function myFunction() {
+            document.getElementById("myfun").innerHTML = "Just Function";
+        }
+
+        var myanonymousfun = function () {
+            document.getElementById("myfun").innerHTML = "Anonymous Function";
+        }
+
+        var myArrowFunction = () => document.getElementById("myfun").innerHTML = "My Arrow Function";
+
+        function multipleArguments(...input)
+        {
+            document.getElementById("myfun").innerHTML = "Function With Multiple Arguments";
+        }
+
+    </script>
+
+</body>
+
+</html>
